@@ -12,6 +12,12 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+function midpoint(list) {
+  if (list.size() % 2 !== 0) {
+    return list.getAt((list.size() - 1) / 2);
+  } else {
+    return list.getAt((list.size() / 2) - 1);
+  }
+}
 
 module.exports = midpoint;
